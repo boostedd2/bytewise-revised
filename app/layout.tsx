@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { RouteProvider } from "@/app/providers/route-provider";
 import { ThemeProvider } from "@/app/providers/theme-provider";
 import "@/app/styles/globals.css";
+import { NavBar } from "@/app/components/navigation/NavBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +29,10 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} scroll-smooth`}>
       <body className="bg-primary antialiased">
         <RouteProvider>
-          <ThemeProvider>{children}</ThemeProvider>
+          <ThemeProvider>
+            <NavBar />
+            {children}
+          </ThemeProvider>
         </RouteProvider>
       </body>
     </html>
