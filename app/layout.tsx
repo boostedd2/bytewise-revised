@@ -12,8 +12,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Your App Name",
-  description: "Your app description",
+  title: "Bytewise",
+  description: "Modern Software Development",
 };
 
 export const viewport: Viewport = {

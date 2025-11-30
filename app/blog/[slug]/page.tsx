@@ -1,4 +1,5 @@
 import { getPostSlugs, getPostBySlug } from "@/lib/posts";
+import type { Metadata } from "next";
 
 export async function generateStaticParams() {
   const slugs = getPostSlugs();
@@ -7,6 +8,26 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({
     slug: slug.replace(".md", ""),
   }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+
+  return {
+    title: post.frontmatter.title,
+    description: post.frontmatter.description || post.frontmatter.excerpt,
+    keywords: post.frontmatter.tags ?? [],
+    openGraph: {
+      title: post.frontmatter.title,
+      description: post.frontmatter.description,
+      type: "article",
+    },
+  };
 }
 
 interface PostPageProps {
