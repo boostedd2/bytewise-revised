@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 
 export async function generateStaticParams() {
   const slugs = getPostSlugs();
-  console.log("Static slugs found:", slugs);
 
   return slugs.map((slug) => ({
     slug: slug.replace(".md", ""),
