@@ -3,7 +3,6 @@ import { Button } from "@/components/base/buttons/button";
 export default function Home() {
   return (
     <main className="min-h-screen max-w-container mx-auto">
-      {/* Hero */}
       <section className="flex flex-col justify-center px-6 py-16">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl font-bold leading-tight"></h1>
@@ -29,13 +28,11 @@ export default function Home() {
 
       <hr className="text-slate-100 max-w-150" />
 
-      {/* Secondary Section */}
       <section className="py-20 px-6">
         <div className="w-full">
           <h2 className="text-2xl mb-10">What's new</h2>
 
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
-            {/* Card 1 */}
             <div className="rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
               <img
                 src="/images/post-1.jpg"
@@ -56,7 +53,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Card 2 */}
             <div className="rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
               <img
                 src="/images/post-2.jpg"
