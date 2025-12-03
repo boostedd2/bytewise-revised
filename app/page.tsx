@@ -26,14 +26,14 @@ export default function Home() {
         </div>
       </section>
 
-      <hr className="text-slate-100 max-w-150" />
+      <hr className="text-slate-100 max-w-160" />
 
       <section className="py-20 px-6">
         <div className="w-full">
           <h2 className="text-2xl mb-10">What's new</h2>
 
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
-            <div className="rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
+            <div className="rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow overflow-hidden">
               <img
                 src="/images/post-1.jpg"
                 alt="Post preview"
@@ -43,33 +43,17 @@ export default function Home() {
                 <h3 className="text-lg font-semibold">
                   Introducing the new homelab setup
                 </h3>
-                <p className="text-gray-600 mt-2 text-sm leading-relaxed flex-1">
+                <p className="text-gray-600 mt-2 leading-relaxed flex-1">
                   A step-by-step breakdown of the new infrastructure powering my
                   dev environment.
                 </p>
-                <button className="mt-4 text-sm font-medium text-blue-600 hover:text-blue-700">
-                  Read more →
-                </button>
-              </div>
-            </div>
-
-            <div className="rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col">
-              <img
-                src="/images/post-2.jpg"
-                alt="Post preview"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold">
-                  Exploring application architecture
-                </h3>
-                <p className="text-gray-600 mt-2 text-sm leading-relaxed flex-1">
-                  Diving deeper into system design patterns and how they shape
-                  scalability.
-                </p>
-                <button className="mt-4 text-sm font-medium text-blue-600 hover:text-blue-700">
-                  Read more →
-                </button>
+                <Button
+                  color="primary"
+                  size="sm"
+                  className="ml-auto mt-10 w-fit"
+                >
+                  View &nbsp;--&gt;
+                </Button>
               </div>
             </div>
           </div>
