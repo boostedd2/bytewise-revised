@@ -35,17 +35,16 @@ export default function Home() {
           <div className="grid gap-8 grid-cols-1 md:grid-cols-2">
             <div className="rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow overflow-hidden">
               <img
-                src="/images/post-1.jpg"
+                src="https://placehold.co/600x400@2x.png"
                 alt="Post preview"
                 className="w-full h-48 object-cover"
               />
               <div className="p-6 flex flex-col flex-1">
-                <h3 className="text-lg font-semibold">
-                  Introducing the new homelab setup
-                </h3>
+                <h3 className="text-lg font-semibold">The Homelab Setup</h3>
                 <p className="text-gray-600 mt-2 leading-relaxed flex-1">
-                  A step-by-step breakdown of the new infrastructure powering my
-                  dev environment.
+                  A breakdown of the hardware and software that powers various
+                  services running within my home network, and allows me to
+                  expiriment with automation and infrastructure.
                 </p>
                 <Button
                   color="primary"
